@@ -4,12 +4,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
-const dbPassword = process.env.DB_ADMIN_PASS;
 const dbUrl = `mongodb://localhost:27017/mydb`
                
 const app = express();
 
-const PORT = 9000;
+const PORT = 80;
 
 const register = require('./routes/register');
 const login = require('./routes/login');
