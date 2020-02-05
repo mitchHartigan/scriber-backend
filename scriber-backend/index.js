@@ -6,7 +6,7 @@ const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const dbPassword = process.env.DB_ADMIN_PASS;
 const dbUrl = `mongodb+srv://admin:${dbPassword}@cluster0-vl3pn.mongodb.net/
-               test?retryWrites=true&w=majority`
+               test?retryWrites=true&w=majority?authSource=admin`
                
 const app = express();
 
