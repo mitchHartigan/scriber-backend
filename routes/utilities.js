@@ -1,7 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const dbPassword = process.env.DB_ADMIN_PASS;
-const dbUrl = `mongodb+srv://admin:${dbPassword}@cluster0-vl3pn.mongodb.net/
-               test?retryWrites=true&w=majority`
+const dbUrl = `mongodb://localhost:27017/mydb`
 const jwt = require('jsonwebtoken');
 
 const fetchUsers = () => {

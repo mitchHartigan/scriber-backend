@@ -5,8 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const dbPassword = process.env.DB_ADMIN_PASS;
-const dbUrl = `mongodb+srv://admin:${dbPassword}@cluster0-vl3pn.mongodb.net/
-               test?retryWrites=true&w=majority`
+const dbUrl = `mongodb://localhost:27017/mydb`
                
 const app = express();
 
@@ -27,7 +26,7 @@ app.use(cors());
 (function checkAtlasDbConnection () {
   MongoClient.connect(dbUrl, {useNewUrlParser: true}, (err, db)=> {
     if (err) throw err;
-    console.log('Connection established with MongoDB Atlas');
+    console.log('Connection established with MongoDB');
   })
 }) ();
 
