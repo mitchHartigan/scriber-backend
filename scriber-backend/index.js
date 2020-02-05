@@ -10,7 +10,7 @@ const dbUrl = `mongodb+srv://admin:${dbPassword}@cluster0-vl3pn.mongodb.net/
                
 const app = express();
 
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 
 const register = require('./routes/register');
 const login = require('./routes/login');
